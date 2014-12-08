@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F7F351B-A6EF-429A-BCCE-C4C0C0BD0B77}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CafeteriaAndRestaurant</RootNamespace>
+    <AssemblyName>CafeteriaAndRestaurant</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CafeteriaAndRestaurant.BLL">
+      <HintPath>..\CafeteriaAndRestaurant.BLL\bin\Debug\CafeteriaAndRestaurant.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="CafeteriaAndRestaurant.DAL">
+      <HintPath>..\CafeteriaAndRestaurant.DAL\bin\Debug\CafeteriaAndRestaurant.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CafeteriaAndRestaurant.BLL">
+      <HintPath>..\CafeteriaAndRestaurant.BLL\bin\Debug\CafeteriaAndRestaurant.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="CafeteriaAndRestaurant.DAL">
+      <HintPath>..\CafeteriaAndRestaurant.DAL\bin\Debug\CafeteriaAndRestaurant.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CRAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRAddCategory.Designer.cs">
+      <DependentUpon>CRAddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRAddProduct.Designer.cs">
+      <DependentUpon>CRAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRCafeteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRCafeteria.Designer.cs">
+      <DependentUpon>CRCafeteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRLogin.Designer.cs">
+      <DependentUpon>CRLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRMain.Designer.cs">
+      <DependentUpon>CRMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRReport.Designer.cs">
+      <DependentUpon>CRReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRRestaurant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRRestaurant.Designer.cs">
+      <DependentUpon>CRRestaurant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport11.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetTest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRTestReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRTestReport.Designer.cs">
+      <DependentUpon>FRTestReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrintDto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CRAddCategory.resx">
+      <DependentUpon>CRAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRAddProduct.resx">
+      <DependentUpon>CRAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRCafeteria.resx">
+      <DependentUpon>CRCafeteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLogin.resx">
+      <DependentUpon>CRLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRMain.resx">
+      <DependentUpon>CRMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRReport.resx">
+      <DependentUpon>CRReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRRestaurant.resx">
+      <DependentUpon>CRRestaurant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport11.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRTestReport.resx">
+      <DependentUpon>FRTestReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSetTest.xsc">
+      <DependentUpon>DataSetTest.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTest.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTest.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTest.xss">
+      <DependentUpon>DataSetTest.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAddProduct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightruler.jpg" />
+    <None Include="Resources\restaurant.png" />
+    <None Include="Resources\coffee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\close.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\edit.PNG" />
+    <None Include="Resources\key-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

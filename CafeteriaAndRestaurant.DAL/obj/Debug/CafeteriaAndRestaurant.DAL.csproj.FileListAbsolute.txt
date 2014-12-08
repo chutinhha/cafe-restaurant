@@ -1,0 +1,29 @@
+D:\Viet An Company\CafeteriaAndRestaurant\CafeteriaAndRestaurant.DAL\bin\Debug\CafeteriaAndRestaurant.DAL.dll.config
+D:\Viet An Company\CafeteriaAndRestaurant\CafeteriaAndRestaurant.DAL\bin\Debug\CafeteriaAndRestaurant.DAL.dll
+D:\Viet An Company\CafeteriaAndRestaurant\CafeteriaAndRestaurant.DAL\bin\Debug\CafeteriaAndRestaurant.DAL.pdb
+D:\Viet An Company\CafeteriaAndRestaurant\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.dll
+D:\Viet An Company\CafeteriaAndRestaurant\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Viet An Company\CafeteriaAndRestaurant\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.xml
+D:\Viet An Company\CafeteriaAndRestaurant\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Viet An Company\CafeteriaAndRestaurant\CafeteriaAndRestaurant.DAL\obj\Debug\CafeteriaAndRestaurant.DAL.csprojResolveAssemblyReference.cache
+D:\Viet An Company\CafeteriaAndRestaurant\CafeteriaAndRestaurant.DAL\obj\Debug\CafeteriaAndRestaurant.DAL.dll
+D:\Viet An Company\CafeteriaAndRestaurant\CafeteriaAndRestaurant.DAL\obj\Debug\CafeteriaAndRestaurant.DAL.pdb
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.DAL\bin\Debug\CafeteriaAndRestaurant.DAL.dll.config
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.DAL\bin\Debug\CafeteriaAndRestaurant.DAL.dll
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.DAL\bin\Debug\CafeteriaAndRestaurant.DAL.pdb
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.dll
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.xml
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.DAL\obj\Debug\CafeteriaAndRestaurant.DAL.csprojResolveAssemblyReference.cache
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.DAL\obj\Debug\CafeteriaAndRestaurant.DAL.dll
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.DAL\obj\Debug\CafeteriaAndRestaurant.DAL.pdb
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.DAL\bin\Debug\CafeteriaAndRestaurant.DAL.dll.config
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.DAL\bin\Debug\CafeteriaAndRestaurant.DAL.dll
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.DAL\bin\Debug\CafeteriaAndRestaurant.DAL.pdb
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.DAL\obj\Debug\CafeteriaAndRestaurant.DAL.dll
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.DAL\obj\Debug\CafeteriaAndRestaurant.DAL.pdb
