@@ -1,0 +1,14 @@
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.BLL\bin\Debug\CafeteriaAndRestaurant.BLL.dll
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.BLL\bin\Debug\CafeteriaAndRestaurant.BLL.pdb
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.BLL\obj\Debug\CafeteriaAndRestaurant.BLL.csprojResolveAssemblyReference.cache
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.BLL\obj\Debug\CafeteriaAndRestaurant.BLL.dll
+D:\Working\Cafe-Retaurant\CafeteriaAndRestaurant.BLL\obj\Debug\CafeteriaAndRestaurant.BLL.pdb
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\bin\Debug\CafeteriaAndRestaurant.BLL.dll
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\bin\Debug\CafeteriaAndRestaurant.BLL.pdb
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\bin\Debug\CafeteriaAndRestaurant.DAL.dll
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\bin\Debug\EntityFramework.dll
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\bin\Debug\CafeteriaAndRestaurant.DAL.pdb
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\bin\Debug\EntityFramework.xml
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\obj\Debug\CafeteriaAndRestaurant.BLL.csprojResolveAssemblyReference.cache
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\obj\Debug\CafeteriaAndRestaurant.BLL.dll
+C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\obj\Debug\CafeteriaAndRestaurant.BLL.pdb

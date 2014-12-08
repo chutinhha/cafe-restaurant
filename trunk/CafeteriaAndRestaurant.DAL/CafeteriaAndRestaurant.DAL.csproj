@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A40478E7-F8D9-457F-9277-545386F84C07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CafeteriaAndRestaurant.DAL</RootNamespace>
+    <AssemblyName>CafeteriaAndRestaurant.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bill.cs">
+      <DependentUpon>CafeteriaAndRestaurant.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BillDetail.cs">
+      <DependentUpon>CafeteriaAndRestaurant.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CafeteriaAndRestaurant.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CafeteriaAndRestaurant.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CafeteriaAndRestaurant.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CafeteriaAndRestaurant.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CafeteriaAndRestaurant.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CafeteriaAndRestaurant.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>CafeteriaAndRestaurant.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DALBills.cs" />
+    <Compile Include="DALCategory.cs" />
+    <Compile Include="DALCheckedLogin.cs" />
+    <Compile Include="DALProduct.cs" />
+    <Compile Include="DALProductFrom.cs" />
+    <Compile Include="Employee.cs">
+      <DependentUpon>CafeteriaAndRestaurant.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrintDto.cs" />
+    <Compile Include="Models\CheckLoginDto.cs" />
+    <Compile Include="Product.cs">
+      <DependentUpon>CafeteriaAndRestaurant.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductFrom.cs">
+      <DependentUpon>CafeteriaAndRestaurant.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>CafeteriaAndRestaurant.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>CafeteriaAndRestaurant.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="CafeteriaAndRestaurant.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CafeteriaAndRestaurant.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CafeteriaAndRestaurant.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CafeteriaAndRestaurant.edmx</DependentUpon>
+      <LastGenOutput>CafeteriaAndRestaurant.Context.cs</LastGenOutput>
+    </None>
+    <None Include="CafeteriaAndRestaurant.edmx.diagram">
+      <DependentUpon>CafeteriaAndRestaurant.edmx</DependentUpon>
+    </None>
+    <None Include="CafeteriaAndRestaurant.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CafeteriaAndRestaurant.edmx</DependentUpon>
+      <LastGenOutput>CafeteriaAndRestaurant.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
