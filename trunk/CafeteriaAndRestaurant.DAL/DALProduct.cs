@@ -64,7 +64,7 @@ namespace CafeteriaAndRestaurant.DAL
             {
                 Product existing = contextDB.Products.Find(product.ProductId);
                 ((IObjectContextAdapter)contextDB).ObjectContext.Detach(existing);
-                contextDB.Entry(product).State = EntityState.Modified;
+                contextDB.Entry(product).State = EntityState.Deleted;
                 contextDB.SaveChanges();
                 return true;
             }
