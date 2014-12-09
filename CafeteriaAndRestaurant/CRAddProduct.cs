@@ -50,11 +50,14 @@ namespace CafeteriaAndRestaurant
         {
             gvproductlist.Rows.Clear();
             var list = ProductBLL.GetProductList();
-            foreach(var l in list)
+            if(list.ToList()!=null)
             {
-                gvproductlist.Rows.Add(l.ProductId,l.ProductName,l.ProductUnit,l.OriginalPrice,l.Category.CategoryName,l.Description,"Delete");
-            }
-            gvproductlist.Refresh();
+                foreach (var l in list)
+                {
+                    gvproductlist.Rows.Add(l.ProductId, l.ProductName, l.ProductUnit, l.OriginalPrice, l.Category.CategoryName, l.Description, "Delete");
+                }
+                gvproductlist.Refresh();
+            }  
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -144,9 +147,9 @@ namespace CafeteriaAndRestaurant
             var senderGrid = (DataGridView)sender;
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewLinkColumn && e.RowIndex >= 0)
             {
-                DialogResult result = MessageBox.Show("Do you want to delete ?","Warning", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
+                //DialogResult result = MessageBox.Show("Do you want to delete ?","Warning", MessageBoxButtons.YesNo);
+                //if (result == DialogResult.Yes)
+                //{
                     try
                     {
                         Product product = new Product
@@ -167,7 +170,7 @@ namespace CafeteriaAndRestaurant
                     }
                 }
                 LoadProductList();
-                }                
+                //}                
         }
 
     }
