@@ -50,13 +50,14 @@ namespace CafeteriaAndRestaurant
         {
             gvproductlist.Rows.Clear();
             var list = ProductBLL.GetProductList();
-            if(list.ToList()!=null)
+            if(list!=null)
             {
                 foreach (var l in list)
                 {
                     gvproductlist.Rows.Add(l.ProductId, l.ProductName, l.ProductUnit, l.OriginalPrice, l.Category.CategoryName, l.Description, "Delete");
                 }
                 gvproductlist.Refresh();
+                this.Refresh();
             }  
         }
         private void pictureBox1_Click(object sender, EventArgs e)
