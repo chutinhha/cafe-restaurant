@@ -30,11 +30,29 @@ namespace CafeteriaAndRestaurant
             cboCategories.DataSource = categoryBLL.GetCategoriesByTypeId(TypeId);
         }
 
+        private void LoadGridBills()
+        {
+            gvBills.Rows.Clear();
+            List<Bill> lstBills = new List<Bill>();
+            BLLBills bllBills = new BLLBills();
+            lstBills = bllBills.GetAllBills();
+            foreach (Bill bill in lstBills)
+            {
+                gvBills.Rows.Add(bill.BillId, bill.CreatedDate, bill.Total, "Delete");
+            }
+        }
+
         private void CRRestaurant_Load(object sender, EventArgs e)
         {
             gvProducts.AutoGenerateColumns = false;
             gvProductsToBills.AutoGenerateColumns = false;
+            gvBills.AutoGenerateColumns = false;
             LoadCboCategories();
+            LoadGridBills();
+
+            pictureBox1.Enabled = true;
+            pictureBox2.Enabled = true;
+            btnEdit.Enabled = false;
         }
 
         private void cboCategories_SelectedIndexChanged(object sender, EventArgs e)
@@ -210,6 +228,80 @@ namespace CafeteriaAndRestaurant
             }
             CRReport frm = new CRReport(lstProductForPrint);
             frm.ShowDialog();
+        }
+
+        private void gvBills_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                pictureBox1.Enabled = false;
+                pictureBox2.Enabled = false;
+                btnEdit.Enabled = true;
+
+                int billsID = int.Parse(gvBills.Rows[e.RowIndex].Cells["colBillsID"].Value.ToString());
+                Bill bills = new Bill();
+                BLLBills bllBills = new BLLBills();
+                bills = bllBills.GetBillsById(billsID);
+
+                if (gvBills.Columns[e.ColumnIndex].Name == "colBillsDeleted")
+                {
+                    if (MessageBox.Show("Are you sure to delete: " + gvBills.Rows[e.RowIndex].Cells["colBillsId"].Value.ToString(), "Message", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                    {
+                        bllBills.Deleted(bills);
+                        LoadGridBills();
+                        gvProductsToBills.Rows.Clear();
+                        return;
+                    }
+                }
+
+                gvProductsToBills.Rows.Clear();
+                foreach (BillDetail billsDetail in bills.BillDetails)
+                {
+                    Product product = new Product();
+                    BLLProduct productBLL = new BLLProduct();
+                    product = productBLL.GetProductById(billsDetail.ProductId);
+
+                    gvProductsToBills.Rows.Add(product.ProductId, product.ProductName, billsDetail.RealPrice, billsDetail.Amounts, billsDetail.Sum, "Delete");
+                }
+
+                lbTotal.Text = bills.Total.ToString();
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            List<BillDetail> lstBillDetail = new List<BillDetail>();
+            for (int i = 0; i < gvProductsToBills.Rows.Count; i++)
+            {
+                BillDetail billDetail = new BillDetail()
+                {
+                    ProductId = int.Parse(gvProductsToBills.Rows[i].Cells["colID"].Value.ToString()),
+                    Amounts = int.Parse(gvProductsToBills.Rows[i].Cells["colAmounts"].Value.ToString()),
+                    RealPrice = float.Parse(gvProductsToBills.Rows[i].Cells["colRealPrice"].Value.ToString()),
+                    Sum = float.Parse(gvProductsToBills.Rows[i].Cells["colTotal"].Value.ToString()),
+                    BillDetailDescription = string.Empty
+                };
+                lstBillDetail.Add(billDetail);
+            }
+
+            Bill bills = new Bill()
+            {
+                BillId = int.Parse(gvBills.Rows[gvBills.CurrentCell.RowIndex].Cells["colBillsId"].Value.ToString()),
+                CreatedDate = DateTime.Parse(gvBills.Rows[gvBills.CurrentCell.RowIndex].Cells["colBillsDate"].Value.ToString()),
+                BillDescription = "",
+                Total = float.Parse(gvBills.Rows[gvBills.CurrentCell.RowIndex].Cells["colBillsTotal"].Value.ToString()),
+                BillDetails = lstBillDetail
+            };
+
+            BLLBills bllBills = new BLLBills();
+            bllBills.Updated(bills);
+            MessageBox.Show("Update is successful", "Message");
+
+            LoadGridBills();
+            gvProductsToBills.Rows.Clear();
+            pictureBox1.Enabled = true;
+            pictureBox2.Enabled = true;
+            btnEdit.Enabled = false;
         }
     }
 }
