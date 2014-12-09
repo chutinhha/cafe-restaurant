@@ -81,6 +81,20 @@ namespace CafeteriaAndRestaurant
 
         }
 
+        private void statisticToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (pnMain.Controls["CRStatistic"] == null)
+            {
+                pnMain.Controls.Clear();
+                CRStatistic CRStatistic = new CRStatistic();
+                CRStatistic.TopLevel = false;
+                pnMain.Controls.Add(CRStatistic);
+                CRStatistic.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                CRStatistic.Dock = DockStyle.Fill;
+                CRStatistic.Show();
+            }
+        }
+
 
     }
 }
