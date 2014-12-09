@@ -36,11 +36,16 @@ namespace CafeteriaAndRestaurant
         private void LoadCategory()
         {
             gvCategory.Rows.Clear();
-            var list = CategoyBLL.GetcategoryList();      
-            foreach(var l in list)
-            {
-                ProductFrom producttypename=BllProductType.GetProductTypeById(l.ProductFromId);                
-                gvCategory.Rows.Add(l.CategoryId, l.CategoryName,producttypename.ProductFromName, l.CategoryDescription,"Delete");
+            var list = CategoyBLL.GetcategoryList();    
+            if(list !=null)
+            { 
+                foreach(var l in list)
+                {
+                    ProductFrom producttypename=BllProductType.GetProductTypeById(l.ProductFromId);                
+                    gvCategory.Rows.Add(l.CategoryId, l.CategoryName,producttypename.ProductFromName, l.CategoryDescription,"Delete");
+                }
+                gvCategory.Refresh();
+                this.Refresh();
             }
         }
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -119,6 +124,8 @@ namespace CafeteriaAndRestaurant
                          catch { MessageBox.Show("Process Error", "Warning"); }
                      }
                      LoadCategory();
+                     txtCategoryname.Text = "";
+                     txtCategoryname.Focus();
                 }                   
         }
 
@@ -148,6 +155,8 @@ namespace CafeteriaAndRestaurant
                         MessageBox.Show("Process Error", "Warning");
                     }                
                 LoadCategory();
+                txtCategoryname.Text = "";
+                txtCategoryname.Focus();
             }                
         }
     }
