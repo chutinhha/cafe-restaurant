@@ -44,13 +44,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cboCategoryFrom = new System.Windows.Forms.ComboBox();
             this.txtCategoryname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvCategory)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -204,6 +204,26 @@
             this.panel2.Size = new System.Drawing.Size(518, 204);
             this.panel2.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::CafeteriaAndRestaurant.Properties.Resources.edit;
+            this.pictureBox2.Location = new System.Drawing.Point(229, 169);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 30);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CafeteriaAndRestaurant.Properties.Resources.add;
+            this.pictureBox1.Location = new System.Drawing.Point(153, 169);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 30);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -252,26 +272,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Category name:";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::CafeteriaAndRestaurant.Properties.Resources.edit;
-            this.pictureBox2.Location = new System.Drawing.Point(229, 169);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 30);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CafeteriaAndRestaurant.Properties.Resources.add;
-            this.pictureBox1.Location = new System.Drawing.Point(153, 169);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 30);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // CRAddCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,7 +280,6 @@
             this.ClientSize = new System.Drawing.Size(582, 383);
             this.Controls.Add(this.panel1);
             this.Name = "CRAddCategory";
-            this.Text = "CRAddCategory";
             this.Load += new System.EventHandler(this.CRAddCategory_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvCategory)).EndInit();

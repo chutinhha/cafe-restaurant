@@ -299,6 +299,7 @@ namespace CafeteriaAndRestaurant
 
             LoadGridBills();
             gvProductsToBills.Rows.Clear();
+            lbTotal.Text = string.Empty;
             pictureBox1.Enabled = true;
             pictureBox2.Enabled = true;
             btnEdit.Enabled = false;

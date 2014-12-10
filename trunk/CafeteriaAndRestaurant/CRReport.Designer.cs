@@ -53,7 +53,6 @@
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "CRReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CRReport";
             this.Load += new System.EventHandler(this.CRReport_Load);
             this.ResumeLayout(false);
 

@@ -33,15 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cboSalesFrom = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
+            this.btnshow = new System.Windows.Forms.Button();
             this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboSalesFrom = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gvstatistic = new System.Windows.Forms.DataGridView();
-            this.btnshow = new System.Windows.Forms.Button();
             this.colProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,45 +70,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
             // 
-            // cboSalesFrom
+            // btnshow
             // 
-            this.cboSalesFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSalesFrom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboSalesFrom.FormattingEnabled = true;
-            this.cboSalesFrom.Location = new System.Drawing.Point(146, 22);
-            this.cboSalesFrom.Name = "cboSalesFrom";
-            this.cboSalesFrom.Size = new System.Drawing.Size(145, 27);
-            this.cboSalesFrom.TabIndex = 0;
-            this.cboSalesFrom.SelectedIndexChanged += new System.EventHandler(this.cboSalesFrom_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Sales from: ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "From:";
-            // 
-            // dateTimePickerFrom
-            // 
-            this.dateTimePickerFrom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFrom.Location = new System.Drawing.Point(146, 60);
-            this.dateTimePickerFrom.Name = "dateTimePickerFrom";
-            this.dateTimePickerFrom.Size = new System.Drawing.Size(145, 26);
-            this.dateTimePickerFrom.TabIndex = 3;
+            this.btnshow.Location = new System.Drawing.Point(169, 129);
+            this.btnshow.Name = "btnshow";
+            this.btnshow.Size = new System.Drawing.Size(75, 30);
+            this.btnshow.TabIndex = 6;
+            this.btnshow.Text = "Show";
+            this.btnshow.UseVisualStyleBackColor = true;
+            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
             // 
             // dateTimePickerTo
             // 
@@ -128,6 +98,46 @@
             this.label3.Size = new System.Drawing.Size(31, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "To:";
+            // 
+            // dateTimePickerFrom
+            // 
+            this.dateTimePickerFrom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFrom.Location = new System.Drawing.Point(146, 60);
+            this.dateTimePickerFrom.Name = "dateTimePickerFrom";
+            this.dateTimePickerFrom.Size = new System.Drawing.Size(145, 26);
+            this.dateTimePickerFrom.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(73, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "From:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(33, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Sales from: ";
+            // 
+            // cboSalesFrom
+            // 
+            this.cboSalesFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSalesFrom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSalesFrom.FormattingEnabled = true;
+            this.cboSalesFrom.Location = new System.Drawing.Point(146, 22);
+            this.cboSalesFrom.Name = "cboSalesFrom";
+            this.cboSalesFrom.Size = new System.Drawing.Size(145, 27);
+            this.cboSalesFrom.TabIndex = 0;
+            this.cboSalesFrom.SelectedIndexChanged += new System.EventHandler(this.cboSalesFrom_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -176,16 +186,6 @@
             this.gvstatistic.Size = new System.Drawing.Size(455, 244);
             this.gvstatistic.TabIndex = 0;
             // 
-            // btnshow
-            // 
-            this.btnshow.Location = new System.Drawing.Point(169, 129);
-            this.btnshow.Name = "btnshow";
-            this.btnshow.Size = new System.Drawing.Size(75, 30);
-            this.btnshow.TabIndex = 6;
-            this.btnshow.Text = "Show";
-            this.btnshow.UseVisualStyleBackColor = true;
-            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
-            // 
             // colProductId
             // 
             this.colProductId.HeaderText = "ProductId";
@@ -229,7 +229,6 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "CRStatistic";
-            this.Text = "CRStatistic";
             this.Load += new System.EventHandler(this.CRStatistic_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

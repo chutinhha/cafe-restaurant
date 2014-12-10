@@ -300,7 +300,7 @@ namespace CafeteriaAndRestaurant
                 BillId = int.Parse(gvBills.Rows[gvBills.CurrentCell.RowIndex].Cells["colBillsId"].Value.ToString()),
                 CreatedDate = DateTime.Parse(gvBills.Rows[gvBills.CurrentCell.RowIndex].Cells["colBillsDate"].Value.ToString()),
                 BillDescription = "",
-                Total = float.Parse(gvBills.Rows[gvBills.CurrentCell.RowIndex].Cells["colBillsTotal"].Value.ToString()),
+                Total = SumTotal(),
                 BillDetails = lstBillDetail
             };
 
@@ -310,6 +310,7 @@ namespace CafeteriaAndRestaurant
 
             LoadGridBills();
             gvProductsToBills.Rows.Clear();
+            lbTotal.Text = string.Empty;
             pictureBox1.Enabled = true;
             pictureBox2.Enabled = true;
             btnEdit.Enabled = false;
