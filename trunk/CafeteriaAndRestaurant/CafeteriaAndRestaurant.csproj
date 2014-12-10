@@ -120,22 +120,15 @@
     <Compile Include="CRRestaurant.Designer.cs">
       <DependentUpon>CRRestaurant.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRStatistic.cs" />
+    <Compile Include="CRStatistic.Designer.cs">
+      <DependentUpon>CRStatistic.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrystalReport11.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DataSetTest.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetTest.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="FRTestReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRTestReport.Designer.cs">
-      <DependentUpon>FRTestReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\PrintDto.cs" />
     <Compile Include="Program.cs" />
@@ -161,29 +154,18 @@
     <EmbeddedResource Include="CRRestaurant.resx">
       <DependentUpon>CRRestaurant.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRStatistic.resx">
+      <DependentUpon>CRStatistic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport11.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FRTestReport.resx">
-      <DependentUpon>FRTestReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="DataSetTest.xsc">
-      <DependentUpon>DataSetTest.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetTest.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetTest.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSetTest.xss">
-      <DependentUpon>DataSetTest.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
