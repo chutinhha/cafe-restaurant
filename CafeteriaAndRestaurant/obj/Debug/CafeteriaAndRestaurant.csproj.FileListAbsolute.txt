@@ -55,3 +55,23 @@ C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndResta
 C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.csproj.GenerateResource.Cache
 C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.exe
 C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.pdb
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.exe.config
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.exe
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.pdb
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.BLL.dll
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.DAL.dll
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.BLL.pdb
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.DAL.pdb
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.csprojResolveAssemblyReference.cache
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.CRAddCategory.resources
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.CRAddProduct.resources
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.CRCafeteria.resources
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.CRLogin.resources
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.CRMain.resources
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.CRReport.resources
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.CRRestaurant.resources
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.CRStatistic.resources
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.Properties.Resources.resources
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.csproj.GenerateResource.Cache
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.exe
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.pdb

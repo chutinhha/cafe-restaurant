@@ -12,3 +12,12 @@ C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\bin\Debug\EntityFramewo
 C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\obj\Debug\CafeteriaAndRestaurant.BLL.csprojResolveAssemblyReference.cache
 C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\obj\Debug\CafeteriaAndRestaurant.BLL.dll
 C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant.BLL\obj\Debug\CafeteriaAndRestaurant.BLL.pdb
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.BLL\bin\Debug\CafeteriaAndRestaurant.BLL.dll
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.BLL\bin\Debug\CafeteriaAndRestaurant.BLL.pdb
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.BLL\bin\Debug\CafeteriaAndRestaurant.DAL.dll
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.BLL\bin\Debug\EntityFramework.dll
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.BLL\bin\Debug\CafeteriaAndRestaurant.DAL.pdb
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.BLL\bin\Debug\EntityFramework.xml
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.BLL\obj\Debug\CafeteriaAndRestaurant.BLL.csprojResolveAssemblyReference.cache
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.BLL\obj\Debug\CafeteriaAndRestaurant.BLL.dll
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.BLL\obj\Debug\CafeteriaAndRestaurant.BLL.pdb
