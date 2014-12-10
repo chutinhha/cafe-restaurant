@@ -38,7 +38,8 @@ namespace CafeteriaAndRestaurant
             var list = CategoyBLL.GetcategoryList();
             if (list != null)
             {
-                foreach (var l in list)
+                var result = list.OrderByDescending(a => a.CategoryId);
+                foreach (var l in result)
                 {
                     ProductFrom producttypename = BllProductType.GetProductTypeById(l.ProductFromId);
                     gvCategory.Rows.Add(l.CategoryId, l.CategoryName, producttypename.ProductFromName, l.CategoryDescription, "Delete");
