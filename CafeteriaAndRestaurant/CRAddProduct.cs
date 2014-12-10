@@ -65,7 +65,7 @@ namespace CafeteriaAndRestaurant
                            productPrice=product.OriginalPrice,
                            productDes=product.Description
                        };
-            if(list.ToList() !=null)
+            if(list !=null)
             {
                 foreach (var l in list.ToList())
                 {
