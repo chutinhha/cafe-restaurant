@@ -75,7 +75,8 @@ namespace CafeteriaAndRestaurant.DAL
             try
             {
                 Bill bill = contextDB.Bills.Where(bil => bil.BillId == bills.BillId).FirstOrDefault();
-                bill.BillDetails.Clear();
+                bill.Total = bills.Total;
+                DeletedBillsDetail(bill.BillDetails.ToList());
                 bill.BillDetails = (List<BillDetail>)bills.BillDetails;
                 contextDB.SaveChanges();
             }
