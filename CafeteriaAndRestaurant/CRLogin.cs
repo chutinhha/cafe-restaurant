@@ -65,8 +65,11 @@ namespace CafeteriaAndRestaurant
                     MessageBox.Show(checkedLogin.Message, "Message");
                     return;
                 }
+                this.Hide();                
                 CRMain frm = new CRMain();
-                frm.ShowDialog();
+                frm.Show();
+                //frm.ShowDialog();
+                
             }
         }
     }

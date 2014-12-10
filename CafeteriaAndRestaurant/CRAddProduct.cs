@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CafeteriaAndRestaurant.DAL;
 using CafeteriaAndRestaurant.BLL;
 using System.Threading;
+using System.Globalization;
 namespace CafeteriaAndRestaurant
 {
     public partial class CRAddProduct : Form
@@ -45,11 +46,13 @@ namespace CafeteriaAndRestaurant
         }
         private void LoadProductList()
         {
+            gvproductlist.Rows.Clear();
             CafeteriaAndRestaurantEntities contextDB = new CafeteriaAndRestaurantEntities();
             var list = from product in contextDB.Products
                        from producttype in contextDB.ProductFroms
                        from category in contextDB.Categories
                        where category.ProductFromId== producttype.ProductFromId && product.CategoryId == category.CategoryId
+                       orderby product.ProductId descending
                        select new
                        {
                            productId=product.ProductId,
@@ -102,7 +105,7 @@ namespace CafeteriaAndRestaurant
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtproductname.Text) || string.IsNullOrEmpty(txtprice.Text) || string.IsNullOrEmpty(txtunit.Text) || IsNumber(txtprice.Text)==false)
+            if(string.IsNullOrEmpty(txtproductname.Text) || string.IsNullOrEmpty(txtprice.Text) || string.IsNullOrEmpty(txtunit.Text))
             {
                 MessageBox.Show("Information Required", "Warning");
             }
@@ -115,7 +118,7 @@ namespace CafeteriaAndRestaurant
                         ProductId=productId,
                         ProductName=txtproductname.Text,
                         ProductUnit=txtunit.Text,
-                        OriginalPrice=float.Parse(txtprice.Text),
+                        OriginalPrice = double.Parse(txtprice.Text, CultureInfo.InvariantCulture),
                         CategoryId=int.Parse(cbocategory.SelectedValue.ToString()),
                         Description=txtdescription.Text
                     };
@@ -168,7 +171,7 @@ namespace CafeteriaAndRestaurant
                         {
                             ProductId = productId,
                             ProductName = txtproductname.Text,
-                            OriginalPrice = float.Parse(txtprice.Text),
+                            OriginalPrice = double.Parse(txtprice.Text),
                             ProductUnit = txtunit.Text,
                             CategoryId = int.Parse(cbocategory.SelectedValue.ToString()),
                             Description = txtdescription.Text
@@ -182,8 +185,7 @@ namespace CafeteriaAndRestaurant
                         MessageBox.Show("Process Successful", "Warning");
                     }
                 }
-                LoadProductList();
-                
+                LoadProductList();                
         }
 
         private void gvproductlist_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -200,7 +202,7 @@ namespace CafeteriaAndRestaurant
                         {
                             ProductId = productId,
                             ProductName = txtproductname.Text,
-                            OriginalPrice = float.Parse(txtprice.Text),
+                            OriginalPrice = double.Parse(txtprice.Text),
                             ProductUnit = txtunit.Text,
                             CategoryId = int.Parse(cbocategory.SelectedValue.ToString()),
                             Description = txtdescription.Text
@@ -220,15 +222,18 @@ namespace CafeteriaAndRestaurant
 
         private void txtprice_KeyPress(object sender, KeyPressEventArgs e)
         {
-            string decimalString = Thread.CurrentThread.CurrentCulture.NumberFormat.CurrencyDecimalSeparator;
-            char decimalChar = Convert.ToChar(decimalString);
-
-            if (Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar)) { }
-            else if (e.KeyChar == decimalChar && txtprice.Text.IndexOf(decimalString) == -1)
-            { }
-            else
+            // allows 0-9, backspace, and decimal
+            if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar != 46))
             {
                 e.Handled = true;
+                return;
+            }
+
+            // checks to make sure only 1 decimal is allowed
+            if (e.KeyChar == 46)
+            {
+                if ((sender as TextBox).Text.IndexOf(e.KeyChar) != -1)
+                    e.Handled = true;
             }
         }
 

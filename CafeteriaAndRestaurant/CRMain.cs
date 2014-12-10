@@ -95,6 +95,13 @@ namespace CafeteriaAndRestaurant
             }
         }
 
+        private void logOffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            CRLogin login = new CRLogin();
+            login.ShowDialog();
+        }
+
 
     }
 }
