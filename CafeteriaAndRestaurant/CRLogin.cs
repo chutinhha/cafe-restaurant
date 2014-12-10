@@ -26,6 +26,27 @@ namespace CafeteriaAndRestaurant
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            Login();
+        }
+
+        private void txtUsername_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Login();
+            }
+        }
+
+        private void txtPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Login();
+            }
+        }
+
+        private void Login()
+        {
             if (txtUsername.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Username is required", "Message");

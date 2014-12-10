@@ -384,7 +384,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "CRAddProduct";
-            this.Text = "CRAddProduct";
             this.Load += new System.EventHandler(this.CRAddProduct_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

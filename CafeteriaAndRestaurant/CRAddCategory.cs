@@ -36,17 +36,17 @@ namespace CafeteriaAndRestaurant
         private void LoadCategory()
         {
             gvCategory.Rows.Clear();
-            var list = CategoyBLL.GetcategoryList();    
-            if(list !=null)
-            { 
-                foreach(var l in list)
+            var list = CategoyBLL.GetcategoryList();
+            if (list != null)
+            {
+                foreach (var l in list)
                 {
-                    ProductFrom producttypename=BllProductType.GetProductTypeById(l.ProductFromId);                
-                    gvCategory.Rows.Add(l.CategoryId, l.CategoryName,producttypename.ProductFromName, l.CategoryDescription,"Delete");
+                    ProductFrom producttypename = BllProductType.GetProductTypeById(l.ProductFromId);
+                    gvCategory.Rows.Add(l.CategoryId, l.CategoryName, producttypename.ProductFromName, l.CategoryDescription, "Delete");
                 }
                 gvCategory.Refresh();
                 this.Refresh();
-            }
+            }            
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
