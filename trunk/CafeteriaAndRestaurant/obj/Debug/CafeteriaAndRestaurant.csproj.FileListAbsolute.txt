@@ -56,6 +56,8 @@ C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndResta
 C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.exe
 C:\Users\Huynh\Desktop\cf-res\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.pdb
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.exe.config
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.exe.manifest
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.application
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.exe
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.pdb
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\bin\Debug\CafeteriaAndRestaurant.BLL.dll
@@ -73,5 +75,7 @@ D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Deb
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.CRStatistic.resources
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.Properties.Resources.resources
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.csproj.GenerateResource.Cache
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.exe.manifest
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.application
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.exe
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant\obj\Debug\CafeteriaAndRestaurant.pdb

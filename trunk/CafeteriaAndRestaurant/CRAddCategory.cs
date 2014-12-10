@@ -21,7 +21,6 @@ namespace CafeteriaAndRestaurant
         {
             InitializeComponent();
         }
-
         private void CRAddCategory_Load(object sender, EventArgs e)
         {
             LoadProductType();
@@ -120,12 +119,13 @@ namespace CafeteriaAndRestaurant
                              };
                              CategoyBLL.DeleteCategory(category);
                              MessageBox.Show("Process Successfull", "Warning");
+                             txtCategoryname.Text = "";
+                             txtCategoryname.Focus();
                          }
                          catch { MessageBox.Show("Process Error", "Warning"); }
                      }
                      LoadCategory();
-                     txtCategoryname.Text = "";
-                     txtCategoryname.Focus();
+                  
                 }                   
         }
 
@@ -149,14 +149,15 @@ namespace CafeteriaAndRestaurant
                         };
                         CategoyBLL.UpdateCategory(category);
                         MessageBox.Show("Process Successfull", "Warning");
+                        txtCategoryname.Text = "";
+                        txtCategoryname.Focus();
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Process Error", "Warning");
                     }                
                 LoadCategory();
-                txtCategoryname.Text = "";
-                txtCategoryname.Focus();
+                
             }                
         }
     }

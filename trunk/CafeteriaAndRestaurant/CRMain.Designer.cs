@@ -176,6 +176,8 @@
             this.Controls.Add(this.pnTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(1080, 699);
+            this.MinimumSize = new System.Drawing.Size(1080, 699);
             this.Name = "CRMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CRMain_Load);

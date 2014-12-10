@@ -34,5 +34,6 @@ D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.DAL\bin
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.SqlServer.dll
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.xml
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.DAL\obj\Debug\CafeteriaAndRestaurant.DAL.csprojResolveAssemblyReference.cache
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.DAL\obj\Debug\CafeteriaAndRestaurant.DAL.dll
 D:\Viet An Company\CafeteriaAndRestaurant\CafeNew\CafeteriaAndRestaurant.DAL\obj\Debug\CafeteriaAndRestaurant.DAL.pdb
