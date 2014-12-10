@@ -36,21 +36,28 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvProducts = new System.Windows.Forms.DataGridView();
+            this.colProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProductNamed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colOriginalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gvBills = new System.Windows.Forms.DataGridView();
+            this.colBillsId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBillsDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBillsTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBillsDeleted = new System.Windows.Forms.DataGridViewLinkColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.cboCategories = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,22 +73,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.gvProductsToBills = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnEdit = new System.Windows.Forms.PictureBox();
-            this.colProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProductNamed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colOriginalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBillsId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBillsDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBillsTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBillsDeleted = new System.Windows.Forms.DataGridViewLinkColumn();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRealPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAmounts = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDeleted = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEdit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvBills)).BeginInit();
@@ -101,6 +101,7 @@
             this.gvProducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gvProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -123,7 +124,7 @@
             this.gvProducts.Location = new System.Drawing.Point(3, 68);
             this.gvProducts.Name = "gvProducts";
             this.gvProducts.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gray;
@@ -133,14 +134,36 @@
             this.gvProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gvProducts.RowHeadersVisible = false;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DimGray;
             this.gvProducts.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvProducts.Size = new System.Drawing.Size(298, 218);
             this.gvProducts.TabIndex = 2;
             this.gvProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProducts_CellClick);
             this.gvProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProducts_CellDoubleClick);
+            // 
+            // colProductId
+            // 
+            this.colProductId.DataPropertyName = "ProductId";
+            this.colProductId.HeaderText = "ProductId";
+            this.colProductId.Name = "colProductId";
+            this.colProductId.ReadOnly = true;
+            this.colProductId.Visible = false;
+            // 
+            // colProductNamed
+            // 
+            this.colProductNamed.DataPropertyName = "ProductName";
+            this.colProductNamed.HeaderText = "Product Name";
+            this.colProductNamed.Name = "colProductNamed";
+            this.colProductNamed.ReadOnly = true;
+            this.colProductNamed.Width = 197;
+            // 
+            // colOriginalPrice
+            // 
+            this.colOriginalPrice.DataPropertyName = "OriginalPrice";
+            this.colOriginalPrice.HeaderText = "Price";
+            this.colOriginalPrice.Name = "colOriginalPrice";
+            this.colOriginalPrice.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -199,12 +222,50 @@
             this.gvBills.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.gvBills.RowHeadersVisible = false;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.DimGray;
             this.gvBills.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.gvBills.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvBills.Size = new System.Drawing.Size(300, 169);
             this.gvBills.TabIndex = 5;
             this.gvBills.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBills_CellClick);
+            // 
+            // colBillsId
+            // 
+            this.colBillsId.DataPropertyName = "BillId";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colBillsId.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colBillsId.HeaderText = "ID";
+            this.colBillsId.Name = "colBillsId";
+            this.colBillsId.ReadOnly = true;
+            this.colBillsId.Width = 40;
+            // 
+            // colBillsDate
+            // 
+            this.colBillsDate.DataPropertyName = "CreatedDate";
+            this.colBillsDate.HeaderText = "Date";
+            this.colBillsDate.Name = "colBillsDate";
+            this.colBillsDate.ReadOnly = true;
+            this.colBillsDate.Width = 119;
+            // 
+            // colBillsTotal
+            // 
+            this.colBillsTotal.DataPropertyName = "Total";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colBillsTotal.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colBillsTotal.HeaderText = "Total";
+            this.colBillsTotal.Name = "colBillsTotal";
+            this.colBillsTotal.ReadOnly = true;
+            this.colBillsTotal.Width = 70;
+            // 
+            // colBillsDeleted
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colBillsDeleted.DefaultCellStyle = dataGridViewCellStyle8;
+            this.colBillsDeleted.HeaderText = "Delete";
+            this.colBillsDeleted.Name = "colBillsDeleted";
+            this.colBillsDeleted.ReadOnly = true;
+            this.colBillsDeleted.Text = "Delete";
+            this.colBillsDeleted.Width = 70;
             // 
             // label5
             // 
@@ -425,97 +486,6 @@
             this.gvProductsToBills.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProductsToBills_CellValueChanged);
             this.gvProductsToBills.CurrentCellDirtyStateChanged += new System.EventHandler(this.gvProductsToBills_CurrentCellDirtyStateChanged);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::CafeteriaAndRestaurant.Properties.Resources.preview1;
-            this.pictureBox2.Location = new System.Drawing.Point(684, 481);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 30);
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::CafeteriaAndRestaurant.Properties.Resources.save3;
-            this.pictureBox1.Location = new System.Drawing.Point(760, 481);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 30);
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackgroundImage = global::CafeteriaAndRestaurant.Properties.Resources.edit;
-            this.btnEdit.Location = new System.Drawing.Point(836, 481);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(70, 30);
-            this.btnEdit.TabIndex = 21;
-            this.btnEdit.TabStop = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // colProductId
-            // 
-            this.colProductId.DataPropertyName = "ProductId";
-            this.colProductId.HeaderText = "ProductId";
-            this.colProductId.Name = "colProductId";
-            this.colProductId.ReadOnly = true;
-            this.colProductId.Visible = false;
-            // 
-            // colProductNamed
-            // 
-            this.colProductNamed.DataPropertyName = "ProductName";
-            this.colProductNamed.HeaderText = "Product Name";
-            this.colProductNamed.Name = "colProductNamed";
-            this.colProductNamed.ReadOnly = true;
-            this.colProductNamed.Width = 197;
-            // 
-            // colOriginalPrice
-            // 
-            this.colOriginalPrice.DataPropertyName = "OriginalPrice";
-            this.colOriginalPrice.HeaderText = "Price";
-            this.colOriginalPrice.Name = "colOriginalPrice";
-            this.colOriginalPrice.ReadOnly = true;
-            // 
-            // colBillsId
-            // 
-            this.colBillsId.DataPropertyName = "BillId";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colBillsId.DefaultCellStyle = dataGridViewCellStyle6;
-            this.colBillsId.HeaderText = "ID";
-            this.colBillsId.Name = "colBillsId";
-            this.colBillsId.ReadOnly = true;
-            this.colBillsId.Width = 40;
-            // 
-            // colBillsDate
-            // 
-            this.colBillsDate.DataPropertyName = "CreatedDate";
-            this.colBillsDate.HeaderText = "Date";
-            this.colBillsDate.Name = "colBillsDate";
-            this.colBillsDate.ReadOnly = true;
-            this.colBillsDate.Width = 119;
-            // 
-            // colBillsTotal
-            // 
-            this.colBillsTotal.DataPropertyName = "Total";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colBillsTotal.DefaultCellStyle = dataGridViewCellStyle7;
-            this.colBillsTotal.HeaderText = "Total";
-            this.colBillsTotal.Name = "colBillsTotal";
-            this.colBillsTotal.ReadOnly = true;
-            this.colBillsTotal.Width = 70;
-            // 
-            // colBillsDeleted
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colBillsDeleted.DefaultCellStyle = dataGridViewCellStyle8;
-            this.colBillsDeleted.HeaderText = "Delete";
-            this.colBillsDeleted.Name = "colBillsDeleted";
-            this.colBillsDeleted.ReadOnly = true;
-            this.colBillsDeleted.Text = "Delete";
-            this.colBillsDeleted.Width = 70;
-            // 
             // colID
             // 
             this.colID.DataPropertyName = "ProductId";
@@ -563,6 +533,36 @@
             this.colDeleted.HeaderText = "Delete";
             this.colDeleted.Name = "colDeleted";
             this.colDeleted.Width = 71;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::CafeteriaAndRestaurant.Properties.Resources.preview1;
+            this.pictureBox2.Location = new System.Drawing.Point(684, 481);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 30);
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::CafeteriaAndRestaurant.Properties.Resources.save3;
+            this.pictureBox1.Location = new System.Drawing.Point(760, 481);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 30);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackgroundImage = global::CafeteriaAndRestaurant.Properties.Resources.edit;
+            this.btnEdit.Location = new System.Drawing.Point(836, 481);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(70, 30);
+            this.btnEdit.TabIndex = 21;
+            this.btnEdit.TabStop = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // CRRestaurant
             // 
