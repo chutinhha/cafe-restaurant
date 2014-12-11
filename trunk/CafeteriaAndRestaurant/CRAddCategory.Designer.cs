@@ -66,7 +66,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(692, 383);
+            this.panel1.Size = new System.Drawing.Size(692, 468);
             this.panel1.TabIndex = 0;
             // 
             // gvCategory
@@ -74,9 +74,9 @@
             this.gvCategory.AllowUserToAddRows = false;
             this.gvCategory.AllowUserToResizeColumns = false;
             this.gvCategory.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
             this.gvCategory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gvCategory.BackgroundColor = System.Drawing.Color.Tan;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -94,7 +94,7 @@
             this.colProductType,
             this.colCategoryDescription,
             this.colDelete});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray;
@@ -102,7 +102,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvCategory.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gvCategory.Location = new System.Drawing.Point(15, 226);
+            this.gvCategory.Location = new System.Drawing.Point(58, 226);
             this.gvCategory.Name = "gvCategory";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -114,9 +114,10 @@
             this.gvCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gvCategory.RowHeadersVisible = false;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DimGray;
             this.gvCategory.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvCategory.Size = new System.Drawing.Size(593, 150);
+            this.gvCategory.Size = new System.Drawing.Size(564, 239);
             this.gvCategory.TabIndex = 1;
             this.gvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvCategory_CellClick);
             this.gvCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvCategory_CellContentClick);
@@ -141,7 +142,7 @@
             // 
             // colCategoryDescription
             // 
-            this.colCategoryDescription.HeaderText = "CategoryDescription";
+            this.colCategoryDescription.HeaderText = "Description";
             this.colCategoryDescription.Name = "colCategoryDescription";
             this.colCategoryDescription.Width = 150;
             // 
@@ -165,9 +166,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Location = new System.Drawing.Point(12, 3);
+            this.groupBox1.Location = new System.Drawing.Point(55, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(596, 217);
+            this.groupBox1.Size = new System.Drawing.Size(567, 217);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Infomation";
@@ -280,7 +281,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(692, 383);
+            this.ClientSize = new System.Drawing.Size(692, 468);
             this.Controls.Add(this.panel1);
             this.Name = "CRAddCategory";
             this.Load += new System.EventHandler(this.CRAddCategory_Load);
