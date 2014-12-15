@@ -295,7 +295,7 @@ namespace CafeteriaAndRestaurant
 
             BLLBills bllBills = new BLLBills();
             bllBills.Updated(bills);
-            MessageBox.Show("Update successful", "Message");
+            MessageBox.Show("Update Successful", "Message");
 
             LoadGridBills();
             gvProductsToBills.Rows.Clear();

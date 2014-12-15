@@ -73,7 +73,7 @@ namespace CafeteriaAndRestaurant
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Add Error", "Warning");
+                        MessageBox.Show("Add Fail", "Warning");
                     }                
                 LoadCategory();
             }               
