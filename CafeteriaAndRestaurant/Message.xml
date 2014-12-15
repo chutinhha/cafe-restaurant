@@ -1,0 +1,31 @@
+﻿<MessageShow>
+<MessageError>
+<key>1</key>
+<value>Add Successful</value>
+</MessageError>
+<MessageError>
+<key>2</key>
+<value>Add Fail</value>
+</MessageError>
+<MessageError>
+<key>3</key>
+<value>Update Successful</value>
+</MessageError>
+<MessageError>
+<key>4</key>
+<value>Update Fail</value>
+</MessageError>
+<MessageError >
+<key>5</key>
+<value>Delete Successful</value>
+</MessageError>
+<MessageError>
+<key>6</key>
+<value>Delete Fail</value>
+</MessageError>
+<MessageError>
+<key>7</key>
+<value>Information Required</value>
+</MessageError>
+</MessageShow>
+
