@@ -16,6 +16,7 @@ namespace CafeteriaAndRestaurant
     public partial class CRCafeteria : Form
     {
         private int TypeId;
+        ReadXML message = new ReadXML();
         public CRCafeteria(int id)
         {
             TypeId = id;
@@ -214,7 +215,7 @@ namespace CafeteriaAndRestaurant
 
             BLLBills billsBLL = new BLLBills();
             if (billsBLL.Inserted(bills)) {
-                MessageBox.Show("Created bills successful", "Message");
+                MessageBox.Show(message.ReadXml(1), "Message");
                 LoadGridBills();
             }
         }
@@ -306,7 +307,7 @@ namespace CafeteriaAndRestaurant
 
             BLLBills bllBills = new BLLBills();
             bllBills.Updated(bills);
-            MessageBox.Show("Update Successful", "Message");
+            MessageBox.Show(message.ReadXml(3), "Message");
 
             LoadGridBills();
             gvProductsToBills.Rows.Clear();
