@@ -123,12 +123,12 @@ namespace CafeteriaAndRestaurant
                         Description=txtdescription.Text
                     };
                     ProductBLL.InserProduct(product);
-                    MessageBox.Show("Process Successful", "Warning");
+                    MessageBox.Show("Insert Successful", "Warning");
                     Cleartextbox();
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Process Successful", "Warning");
+                    MessageBox.Show("Insert Fail", "Warning");
                 }
             }
             LoadProductList();            
@@ -177,12 +177,12 @@ namespace CafeteriaAndRestaurant
                             Description = txtdescription.Text
                         };
                         ProductBLL.UpdateProduct(product);
-                        MessageBox.Show("Process Successful", "Warning");
+                        MessageBox.Show("Update Successful", "Warning");
                         Cleartextbox();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Process Successful", "Warning");
+                        MessageBox.Show("Update Fail", "Warning");
                     }
                 }
                 LoadProductList();                
@@ -208,11 +208,11 @@ namespace CafeteriaAndRestaurant
                             Description = txtdescription.Text
                         };
                         ProductBLL.DeleteProduct(product);
-                        MessageBox.Show("Process Successful", "Warning");
+                        MessageBox.Show("Delete Successful", "Warning");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Process Successful", "Warning");
+                        MessageBox.Show("Delete Fail", "Warning");
                     }
                 }
                 LoadProductList();
