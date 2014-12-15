@@ -11,6 +11,9 @@ using CafeteriaAndRestaurant.DAL;
 using CafeteriaAndRestaurant.BLL;
 using System.Configuration;
 using System.Collections.Specialized;
+using System.Xml;
+using System.IO;
+using System.Xml.Linq;
 namespace CafeteriaAndRestaurant
 {
     public partial class CRAddCategory : Form
@@ -18,10 +21,11 @@ namespace CafeteriaAndRestaurant
         BLLCategory CategoyBLL = new BLLCategory();
         BLLProductFrom BllProductType = new BLLProductFrom();
         int categoryId = int.MinValue;
+        ReadXML message = new ReadXML();
         public CRAddCategory()
         {
             InitializeComponent();
-        }
+        }       
         private void CRAddCategory_Load(object sender, EventArgs e)
         {
             LoadProductType();
@@ -52,9 +56,10 @@ namespace CafeteriaAndRestaurant
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+           
             if(string.IsNullOrEmpty(txtCategoryname.Text) || string.IsNullOrEmpty(cboCategoryFrom.Text))
             {
-                MessageBox.Show("Information Required", "Warning");
+                MessageBox.Show(message.ReadXml(7), "Warning");
                 txtCategoryname.Focus();
             }
             else
@@ -69,11 +74,11 @@ namespace CafeteriaAndRestaurant
                             ProductFromId = int.Parse(cboCategoryFrom.SelectedValue.ToString())
                         };
                         CategoyBLL.InsertCategory(category);
-                        MessageBox.Show("Add successful", "Warning");
+                        MessageBox.Show(message.ReadXml(1), "Warning");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Add Fail", "Warning");
+                        MessageBox.Show(message.ReadXml(2), "Warning");
                     }                
                 LoadCategory();
             }               
@@ -121,11 +126,11 @@ namespace CafeteriaAndRestaurant
                                  ProductFromId = int.Parse(cboCategoryFrom.SelectedValue.ToString())
                              };
                              CategoyBLL.DeleteCategory(category);
-                             MessageBox.Show("Delete Successfull", "Warning");
+                             MessageBox.Show(message.ReadXml(5), "Warning");
                              txtCategoryname.Text = "";
                              txtCategoryname.Focus();
                          }
-                         catch { MessageBox.Show("Delete Error", "Warning"); }
+                         catch { MessageBox.Show(message.ReadXml(6), "Warning"); }
                      }
                      LoadCategory();
                   
@@ -151,13 +156,13 @@ namespace CafeteriaAndRestaurant
                             ProductFromId = int.Parse(cboCategoryFrom.SelectedValue.ToString())
                         };
                         CategoyBLL.UpdateCategory(category);
-                        MessageBox.Show("Update Successful", "Warning");
+                        MessageBox.Show(message.ReadXml(3), "Warning");
                         txtCategoryname.Text = "";
                         txtCategoryname.Focus();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Update Error", "Warning");
+                        MessageBox.Show(message.ReadXml(4), "Warning");
                     }                
                 LoadCategory();
                 

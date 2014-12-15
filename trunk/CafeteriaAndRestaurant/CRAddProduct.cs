@@ -17,8 +17,8 @@ namespace CafeteriaAndRestaurant
     {
         BLLProduct ProductBLL = new BLLProduct();
         BLLCategory CategogyBLL = new BLLCategory();
-        BLLProductFrom ProductTypeBLL = new BLLProductFrom();     
-        
+        BLLProductFrom ProductTypeBLL = new BLLProductFrom();
+        ReadXML message = new ReadXML();
         int productId = int.MinValue;
         public CRAddProduct()
         {
@@ -107,7 +107,7 @@ namespace CafeteriaAndRestaurant
         {
             if(string.IsNullOrEmpty(txtproductname.Text) || string.IsNullOrEmpty(txtprice.Text) || string.IsNullOrEmpty(txtunit.Text))
             {
-                MessageBox.Show("Information Required", "Warning");
+                MessageBox.Show(message.ReadXml(7), "Warning");
             }
             else
             {
@@ -123,12 +123,12 @@ namespace CafeteriaAndRestaurant
                         Description=txtdescription.Text
                     };
                     ProductBLL.InserProduct(product);
-                    MessageBox.Show("Insert Successful", "Warning");
+                    MessageBox.Show(message.ReadXml(1), "Warning");
                     Cleartextbox();
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Insert Fail", "Warning");
+                    MessageBox.Show(message.ReadXml(2), "Warning");
                 }
             }
             LoadProductList();            
@@ -161,7 +161,7 @@ namespace CafeteriaAndRestaurant
         {
             if (string.IsNullOrEmpty(txtproductname.Text)|| string.IsNullOrEmpty(txtprice.Text))
             {
-                MessageBox.Show("Information Required", "Warning");
+                MessageBox.Show(message.ReadXml(7), "Warning");
             }
             else
             {
@@ -177,12 +177,12 @@ namespace CafeteriaAndRestaurant
                             Description = txtdescription.Text
                         };
                         ProductBLL.UpdateProduct(product);
-                        MessageBox.Show("Update Successful", "Warning");
+                        MessageBox.Show(message.ReadXml(3), "Warning");
                         Cleartextbox();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Update Fail", "Warning");
+                        MessageBox.Show(message.ReadXml(4), "Warning");
                     }
                 }
                 LoadProductList();                
@@ -208,11 +208,11 @@ namespace CafeteriaAndRestaurant
                             Description = txtdescription.Text
                         };
                         ProductBLL.DeleteProduct(product);
-                        MessageBox.Show("Delete Successful", "Warning");
+                        MessageBox.Show(message.ReadXml(5), "Warning");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Delete Fail", "Warning");
+                        MessageBox.Show(message.ReadXml(6), "Warning");
                     }
                 }
                 LoadProductList();
