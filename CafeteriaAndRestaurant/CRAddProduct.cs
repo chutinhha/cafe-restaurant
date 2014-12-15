@@ -69,7 +69,7 @@ namespace CafeteriaAndRestaurant
             {
                 foreach (var l in list.ToList())
                 {
-                    gvproductlist.Rows.Add(l.productId, l.productName,l.productUnit, l.productPrice, l.categoryName, l.productDes, "Delete",l.categoryId,l.productTypeId);
+                    gvproductlist.Rows.Add(l.productId, l.productName,l.productUnit, l.productPrice, l.categoryName, l.productDes,Properties.Resources.DeleteRed ,l.categoryId,l.productTypeId);
                 }
             }
            
@@ -191,7 +191,7 @@ namespace CafeteriaAndRestaurant
         private void gvproductlist_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewLinkColumn && e.RowIndex >= 0)
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewImageColumn && e.RowIndex >= 0)
             {
                 DialogResult result = MessageBox.Show("Do you want to delete ?","Warning", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)

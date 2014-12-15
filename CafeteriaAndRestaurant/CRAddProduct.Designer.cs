@@ -62,7 +62,7 @@
             this.colOriginalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProductDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDelete = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.colCategoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProductType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
@@ -78,7 +78,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(3, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(765, 311);
+            this.panel1.Size = new System.Drawing.Size(749, 311);
             this.panel1.TabIndex = 0;
             // 
             // groupBox1
@@ -300,7 +300,7 @@
             this.panel2.Controls.Add(this.gvproductlist);
             this.panel2.Location = new System.Drawing.Point(3, 318);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(774, 193);
+            this.panel2.Size = new System.Drawing.Size(749, 193);
             this.panel2.TabIndex = 1;
             // 
             // gvproductlist
@@ -352,11 +352,12 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvproductlist.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gvproductlist.RowHeadersVisible = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DimGray;
             this.gvproductlist.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gvproductlist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvproductlist.Size = new System.Drawing.Size(774, 193);
+            this.gvproductlist.Size = new System.Drawing.Size(749, 193);
             this.gvproductlist.TabIndex = 0;
             this.gvproductlist.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvproductlist_CellClick);
             this.gvproductlist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvproductlist_CellContentClick);
@@ -402,6 +403,7 @@
             this.colDelete.HeaderText = "Delete";
             this.colDelete.Name = "colDelete";
             this.colDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDelete.Width = 75;
             // 
             // colCategoryId
             // 
@@ -420,7 +422,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(808, 523);
+            this.ClientSize = new System.Drawing.Size(764, 523);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "CRAddProduct";
@@ -460,15 +462,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtunit;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProductId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProductUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOriginalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProductDescription;
-        private System.Windows.Forms.DataGridViewLinkColumn colDelete;
+        private System.Windows.Forms.DataGridViewImageColumn colDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoryId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProductType;
-        private System.Windows.Forms.Label label11;
     }
 }

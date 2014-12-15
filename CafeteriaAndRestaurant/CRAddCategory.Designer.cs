@@ -35,23 +35,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gvCategory = new System.Windows.Forms.DataGridView();
-            this.colCategoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProductType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategoryDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDelete = new System.Windows.Forms.DataGridViewLinkColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cboCategoryFrom = new System.Windows.Forms.ComboBox();
             this.txtCategoryname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colCategoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProductType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategoryDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvCategory)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -87,14 +88,13 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCategoryId,
             this.colCategoryName,
             this.colProductType,
             this.colCategoryDescription,
             this.colDelete});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray;
@@ -113,43 +113,15 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gvCategory.RowHeadersVisible = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DimGray;
             this.gvCategory.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvCategory.Size = new System.Drawing.Size(564, 239);
+            this.gvCategory.Size = new System.Drawing.Size(534, 239);
             this.gvCategory.TabIndex = 1;
             this.gvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvCategory_CellClick);
             this.gvCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvCategory_CellContentClick);
-            // 
-            // colCategoryId
-            // 
-            this.colCategoryId.HeaderText = "CategoryId";
-            this.colCategoryId.Name = "colCategoryId";
-            this.colCategoryId.Visible = false;
-            // 
-            // colCategoryName
-            // 
-            this.colCategoryName.HeaderText = "Category Name";
-            this.colCategoryName.Name = "colCategoryName";
-            this.colCategoryName.Width = 150;
-            // 
-            // colProductType
-            // 
-            this.colProductType.HeaderText = "Category From";
-            this.colProductType.Name = "colProductType";
-            this.colProductType.Width = 150;
-            // 
-            // colCategoryDescription
-            // 
-            this.colCategoryDescription.HeaderText = "Description";
-            this.colCategoryDescription.Name = "colCategoryDescription";
-            this.colCategoryDescription.Width = 150;
-            // 
-            // colDelete
-            // 
-            this.colDelete.HeaderText = "Delete";
-            this.colDelete.Name = "colDelete";
             // 
             // groupBox1
             // 
@@ -168,7 +140,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(55, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(567, 217);
+            this.groupBox1.Size = new System.Drawing.Size(537, 217);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Infomation";
@@ -207,26 +179,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(518, 204);
             this.panel2.TabIndex = 1;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::CafeteriaAndRestaurant.Properties.Resources.edit;
-            this.pictureBox2.Location = new System.Drawing.Point(229, 169);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 30);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CafeteriaAndRestaurant.Properties.Resources.add;
-            this.pictureBox1.Location = new System.Drawing.Point(153, 169);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 30);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
@@ -276,6 +228,64 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Category name:";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::CafeteriaAndRestaurant.Properties.Resources.edit;
+            this.pictureBox2.Location = new System.Drawing.Point(229, 169);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 30);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CafeteriaAndRestaurant.Properties.Resources.add;
+            this.pictureBox1.Location = new System.Drawing.Point(153, 169);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 30);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Delete";
+            this.dataGridViewImageColumn1.Image = global::CafeteriaAndRestaurant.Properties.Resources.dele1;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // colCategoryId
+            // 
+            this.colCategoryId.HeaderText = "CategoryId";
+            this.colCategoryId.Name = "colCategoryId";
+            this.colCategoryId.Visible = false;
+            // 
+            // colCategoryName
+            // 
+            this.colCategoryName.HeaderText = "Category Name";
+            this.colCategoryName.Name = "colCategoryName";
+            this.colCategoryName.Width = 150;
+            // 
+            // colProductType
+            // 
+            this.colProductType.HeaderText = "Category From";
+            this.colProductType.Name = "colProductType";
+            this.colProductType.Width = 150;
+            // 
+            // colCategoryDescription
+            // 
+            this.colCategoryDescription.HeaderText = "Description";
+            this.colCategoryDescription.Name = "colCategoryDescription";
+            this.colCategoryDescription.Width = 150;
+            // 
+            // colDelete
+            // 
+            this.colDelete.HeaderText = "Delete";
+            this.colDelete.Name = "colDelete";
+            this.colDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDelete.Width = 75;
+            // 
             // CRAddCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,10 +321,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView gvCategory;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoryId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProductType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoryDescription;
-        private System.Windows.Forms.DataGridViewLinkColumn colDelete;
+        private System.Windows.Forms.DataGridViewImageColumn colDelete;
     }
 }
