@@ -38,7 +38,7 @@ namespace CafeteriaAndRestaurant
             lstBills = bllBills.GetAllBills();
             foreach (Bill bill in lstBills)
             {
-                gvBills.Rows.Add(bill.BillId, bill.CreatedDate, bill.Total, "Delete");
+                gvBills.Rows.Add(bill.BillId, bill.CreatedDate, bill.Total,Properties.Resources.DeleteRed);
             }
         }
         private void frmCafe_Load(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace CafeteriaAndRestaurant
                 }
                 else
                 {
-                    gvProductsToBills.Rows.Add(product.ProductId, product.ProductName, product.OriginalPrice, 1, product.OriginalPrice, "Delete");
+                    gvProductsToBills.Rows.Add(product.ProductId, product.ProductName, product.OriginalPrice, 1, product.OriginalPrice, Properties.Resources.DeleteRed);
                 }
 
                 lbTotal.Text = SumTotal().ToString();
@@ -272,7 +272,7 @@ namespace CafeteriaAndRestaurant
                     BLLProduct productBLL = new BLLProduct();
                     product = productBLL.GetProductById(billsDetail.ProductId);
 
-                    gvProductsToBills.Rows.Add(product.ProductId, product.ProductName, billsDetail.RealPrice, billsDetail.Amounts, billsDetail.Sum, "Delete");
+                    gvProductsToBills.Rows.Add(product.ProductId, product.ProductName, billsDetail.RealPrice, billsDetail.Amounts, billsDetail.Sum, Properties.Resources.DeleteRed);
                 }
 
                 lbTotal.Text = bills.Total.ToString();

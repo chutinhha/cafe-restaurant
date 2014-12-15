@@ -25,6 +25,7 @@ namespace CafeteriaAndRestaurant
         {
             LoadProductType();
             LoadCategory();
+            gvCategory.Columns["colDelete"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
         private void LoadProductType()
         {           
@@ -42,7 +43,7 @@ namespace CafeteriaAndRestaurant
                 foreach (var l in result)
                 {
                     ProductFrom producttypename = BllProductType.GetProductTypeById(l.ProductFromId);
-                    gvCategory.Rows.Add(l.CategoryId, l.CategoryName, producttypename.ProductFromName, l.CategoryDescription, "Delete");
+                    gvCategory.Rows.Add(l.CategoryId, l.CategoryName, producttypename.ProductFromName, l.CategoryDescription,Properties.Resources.DeleteRed);
                 }
                 gvCategory.Refresh();
                 this.Refresh();
@@ -104,7 +105,7 @@ namespace CafeteriaAndRestaurant
            
                 int rowindex = gvCategory.CurrentCell.RowIndex;
                 var senderGrid = (DataGridView)sender;
-                if (senderGrid.Columns[e.ColumnIndex] is DataGridViewLinkColumn && e.RowIndex >= 0)
+                if (senderGrid.Columns[e.ColumnIndex] is DataGridViewImageColumn && e.RowIndex >= 0)
                 {
                      DialogResult result = MessageBox.Show("Do you want to delete ?", "Warning", MessageBoxButtons.YesNo);
                      if (result == DialogResult.Yes)
