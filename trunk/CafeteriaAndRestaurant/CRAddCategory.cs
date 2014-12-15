@@ -81,6 +81,8 @@ namespace CafeteriaAndRestaurant
                         MessageBox.Show(message.ReadXml(2), "Warning");
                     }                
                 LoadCategory();
+                txtCategoryname.Text = string.Empty;
+                txtDescription.Text = string.Empty;
             }               
         }
 
@@ -133,7 +135,8 @@ namespace CafeteriaAndRestaurant
                          catch { MessageBox.Show(message.ReadXml(6), "Warning"); }
                      }
                      LoadCategory();
-                  
+                     txtCategoryname.Text = string.Empty;
+                     txtDescription.Text = string.Empty;
                 }                   
         }
 
@@ -165,7 +168,8 @@ namespace CafeteriaAndRestaurant
                         MessageBox.Show(message.ReadXml(4), "Warning");
                     }                
                 LoadCategory();
-                
+                txtCategoryname.Text = string.Empty;
+                txtDescription.Text = string.Empty;
             }                
         }
     }
