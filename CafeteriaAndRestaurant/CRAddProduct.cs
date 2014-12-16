@@ -107,7 +107,7 @@ namespace CafeteriaAndRestaurant
         {
             if(string.IsNullOrEmpty(txtproductname.Text) || string.IsNullOrEmpty(txtprice.Text) || string.IsNullOrEmpty(txtunit.Text))
             {
-                MessageBox.Show(message.ReadXml(7), "Warning");
+                MessageBox.Show("Information Required", "Warning");
             }
             else
             {
@@ -123,12 +123,12 @@ namespace CafeteriaAndRestaurant
                         Description=txtdescription.Text
                     };
                     ProductBLL.InserProduct(product);
-                    MessageBox.Show(message.ReadXml(1), "Warning");
+                    MessageBox.Show("Add Successful", "Warning");
                     Cleartextbox();
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show(message.ReadXml(2), "Warning");
+                    MessageBox.Show("Add Fail", "Warning");
                 }
             }
             LoadProductList();            
@@ -136,6 +136,7 @@ namespace CafeteriaAndRestaurant
 
         private void gvproductlist_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            pictureBox1.Enabled = false;
             int rowindex = gvproductlist.CurrentCell.RowIndex;
             if(rowindex!=-1)
             {
@@ -161,7 +162,7 @@ namespace CafeteriaAndRestaurant
         {
             if (string.IsNullOrEmpty(txtproductname.Text)|| string.IsNullOrEmpty(txtprice.Text))
             {
-                MessageBox.Show(message.ReadXml(7), "Warning");
+                MessageBox.Show("Information Required", "Warning");
             }
             else
             {
@@ -177,12 +178,13 @@ namespace CafeteriaAndRestaurant
                             Description = txtdescription.Text
                         };
                         ProductBLL.UpdateProduct(product);
-                        MessageBox.Show(message.ReadXml(3), "Warning");
+                        MessageBox.Show("UPdate Successful", "Warning");
                         Cleartextbox();
+                        pictureBox1.Enabled = true;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(message.ReadXml(4), "Warning");
+                        MessageBox.Show("Update Fail", "Warning");
                     }
                 }
                 LoadProductList();                
@@ -208,11 +210,11 @@ namespace CafeteriaAndRestaurant
                             Description = txtdescription.Text
                         };
                         ProductBLL.DeleteProduct(product);
-                        MessageBox.Show(message.ReadXml(5), "Warning");
+                        MessageBox.Show("Delete Successful", "Warning");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(message.ReadXml(6), "Warning");
+                        MessageBox.Show("Delete Fail", "Warning");
                     }
                 }
                 LoadProductList();

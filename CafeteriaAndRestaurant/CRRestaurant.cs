@@ -203,7 +203,7 @@ namespace CafeteriaAndRestaurant
             BLLBills billsBLL = new BLLBills();
             if (billsBLL.Inserted(bills))
             {
-                MessageBox.Show(message.ReadXml(1), "Message");
+                MessageBox.Show("Information Required", "Message");
             }
         }
 
@@ -296,7 +296,7 @@ namespace CafeteriaAndRestaurant
 
             BLLBills bllBills = new BLLBills();
             bllBills.Updated(bills);
-            MessageBox.Show(message.ReadXml(3), "Message");
+            MessageBox.Show("Update Successful", "Message");
 
             LoadGridBills();
             gvProductsToBills.Rows.Clear();

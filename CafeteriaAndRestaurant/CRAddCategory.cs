@@ -59,7 +59,7 @@ namespace CafeteriaAndRestaurant
            
             if(string.IsNullOrEmpty(txtCategoryname.Text) || string.IsNullOrEmpty(cboCategoryFrom.Text))
             {
-                MessageBox.Show(message.ReadXml(7), "Warning");
+                MessageBox.Show("Information Required", "Warning");
                 txtCategoryname.Focus();
             }
             else
@@ -74,11 +74,11 @@ namespace CafeteriaAndRestaurant
                             ProductFromId = int.Parse(cboCategoryFrom.SelectedValue.ToString())
                         };
                         CategoyBLL.InsertCategory(category);
-                        MessageBox.Show(message.ReadXml(1), "Warning");
+                        MessageBox.Show("Add Successful", "Warning");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(message.ReadXml(2), "Warning");
+                        MessageBox.Show("Add Fail", "Warning");
                     }                
                 LoadCategory();
                 txtCategoryname.Text = string.Empty;
@@ -88,6 +88,7 @@ namespace CafeteriaAndRestaurant
 
         private void gvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            pictureBox1.Enabled = false;
             try
             {
                 int rowindex = gvCategory.CurrentCell.RowIndex;                
@@ -128,11 +129,11 @@ namespace CafeteriaAndRestaurant
                                  ProductFromId = int.Parse(cboCategoryFrom.SelectedValue.ToString())
                              };
                              CategoyBLL.DeleteCategory(category);
-                             MessageBox.Show(message.ReadXml(5), "Warning");
+                             MessageBox.Show("Delete Successful", "Warning");
                              txtCategoryname.Text = "";
                              txtCategoryname.Focus();
                          }
-                         catch { MessageBox.Show(message.ReadXml(6), "Warning"); }
+                         catch { MessageBox.Show("Delete fail", "Warning"); }
                      }
                      LoadCategory();
                      txtCategoryname.Text = string.Empty;
@@ -159,13 +160,14 @@ namespace CafeteriaAndRestaurant
                             ProductFromId = int.Parse(cboCategoryFrom.SelectedValue.ToString())
                         };
                         CategoyBLL.UpdateCategory(category);
-                        MessageBox.Show(message.ReadXml(3), "Warning");
+                        MessageBox.Show("Update Successful", "Warning");
                         txtCategoryname.Text = "";
                         txtCategoryname.Focus();
+                        pictureBox1.Enabled = true;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(message.ReadXml(4), "Warning");
+                        MessageBox.Show("Update Fail", "Warning");
                     }                
                 LoadCategory();
                 txtCategoryname.Text = string.Empty;
