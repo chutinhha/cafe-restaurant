@@ -57,12 +57,13 @@ namespace CafeteriaAndRestaurant
                               //let name = objgroup.FirstOrDefault().ProductName
                               //let quantity=objgroup.FirstOrDefault().BillDetails.Select(c=>c.Amounts).Sum()
                               //let total = objgroup.FirstOrDefault().BillDetails.Select(c => c.Sum).Sum()
+                              group new {product,billdetail,bills} by new {product.ProductId, product.ProductName} into g
                               select new
                               {
-                                  ProductId = product.ProductId,
-                                  ProductName = product.ProductName,
-                                  Quantity = billdetail.Amounts,
-                                  Total = billdetail.Sum
+                                  ProductId = g.Key.ProductId,
+                                  ProductName = g.Key.ProductName,
+                                  Quantity = (int?)g.Sum(p => p.billdetail.Amounts),
+                                  Total = (int?)g.Sum(p=>p.billdetail.Sum)
                               };
                     if (sql.ToList().Count > 0)
                     {
